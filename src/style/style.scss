@@ -1,0 +1,153 @@
+@import "default.scss";
+@import "variables.scss";
+@import "layout.scss";
+@import "webfonts.scss";
+@import "reset.scss";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+body {
+    font-family: 'Maven';
+}
+
+h1, h2 {
+    font-family: 'Museo';
+}
+
+header {
+    width: 100%;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        ul {
+            list-style-type: none;
+            display: flex;
+        }
+    }
+    .hero {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-areas: "t";
+        justify-items: center;
+        align-items: end;
+        //background-color: red;
+        color: white;
+        width: 100%;
+        .color {
+            grid-area: t;
+            height: 10rem;
+            width: 100%;
+            background-color: red;
+        }
+        img {
+            grid-area: t;
+        }
+        h1 {
+            grid-area: t;
+            justify-self: start;
+        }
+        p {
+            display: none;
+        }
+    }
+}
+main {
+    .speakers {
+        display: flex;
+        flex-direction: column;
+        @media (min-width: 36rem) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1rem;
+        }
+        @media (min-width: 48rem) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .speaker {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 1rem;
+            .id {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                img {
+                    height: 5rem;
+                    border-radius: 2.5rem;
+                }
+            }
+            .subject {
+                display: none;
+            }
+            .infos {
+                display: none;
+            }
+            .infos.active {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                .hour-room {
+                    display: flex;
+                }
+                a {
+                    text-decoration: none;
+                    color: red;
+                    height: 2rem;
+                    border: 1px solid red;
+                    border-radius: 1rem;
+                    text-align: end;
+                    vertical-align: bottom;
+                }
+            }
+            &.active {
+                background-color: palegoldenrod;
+                height: 15rem;
+                .id {
+                    img {
+                        @media (min-width: 36rem) {
+                            display: none;
+                        }
+                    }
+                }
+                .subject {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .infos {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    .hour-room {
+                        display: flex;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: red;
+                        height: 2rem;
+                        border: 1px solid red;
+                        border-radius: 1rem;
+                        text-align: end;
+                    }
+                }
+            }
+            @media (min-width: 36rem) {
+                .id {
+                    flex-direction: column;
+                    justify-content: start;
+                    img {
+                        order: -1;
+                        width: 100%;
+                        height: auto;
+                        aspect-ratio: 1/1;
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+}

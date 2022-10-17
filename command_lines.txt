@@ -1,0 +1,3 @@
+mkdir src dist src/image src/style src/script dist/image dist/script dist/style
+touch src/style/style.scss src/style/_webfonts.scss src/style/_variables.scss src/style/_reset.scss src/style/_default.scss src/style/_layout.scss
+touch dist/index.html dist/script/script.js dist/style/style.min.css
