@@ -13,14 +13,14 @@ h1, h2, h3, h4, p {
 
 body {
     font-family: 'Maven';
-}
-
-h1, h2 {
-    font-family: 'Museo';
+    font-variation-settings: 'wght'300;
+    margin: 1rem;
 }
 
 header {
     width: 100%;
+    max-width: 60rem;
+    margin: auto;
     nav {
         display: flex;
         justify-content: space-between;
@@ -30,46 +30,67 @@ header {
         }
     }
     .hero {
+        height: 10rem;
+        background-color: #f8294f;
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(1, 1fr);
         grid-template-areas: "t";
-        justify-items: center;
         align-items: end;
-        //background-color: red;
+        margin-top: 4rem;
         color: white;
-        width: 100%;
-        .color {
-            grid-area: t;
-            height: 10rem;
-            width: 100%;
-            background-color: red;
-        }
         img {
             grid-area: t;
+            justify-self: center;
+            position: relative;
+            bottom: 57px;
         }
-        h1 {
+        .text {
             grid-area: t;
-            justify-self: start;
+            position: relative;
+            bottom: 27px;
+            padding: 2rem;
+            h1 {
+                font-family: 'Museo';
+                font-weight: 600;
+                font-size: 2.75rem;
+            }
+            p {
+                display: none;
+            }
         }
-        p {
-            display: none;
+        @media (min-width: 36rem) {
+            grid-template-columns: 1fr 2fr;
+            .text {
+                align-self: center;
+                bottom: auto;
+                grid-column: 2;
+                padding: 0 3rem 2rem 0;
+                h1 {
+                    font-size: 2rem;
+                }
+                p {
+                    display: inline;
+                }
+            }
+        }
+        @media (min-width: 48rem) {
+            grid-template-columns: 1fr 1fr;
         }
     }
 }
 main {
+    max-width: 60rem;
+    margin: auto;
+    .breadcrumb {
+        display: flex;
+        height: 4rem;
+        align-items: center;
+    }
     .speakers {
         display: flex;
         flex-direction: column;
-        @media (min-width: 36rem) {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 1rem;
-        }
-        @media (min-width: 48rem) {
-            grid-template-columns: repeat(4, 1fr);
-        }
+        background-color: #f8f8f8;
         .speaker {
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -78,6 +99,17 @@ main {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                .name-place {
+                    h2 {
+                        font-family: 'Museo';
+                        color: #230A4D;
+                        font-weight: 300;
+                    }
+                    p {
+                        color: #f8294f;     
+                        font-variation-settings: 'wght'300;
+                    }
+                }
                 img {
                     height: 5rem;
                     border-radius: 2.5rem;
@@ -86,29 +118,26 @@ main {
             .subject {
                 display: none;
             }
-            .infos {
+            .hour-room {
                 display: none;
             }
-            .infos.active {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                .hour-room {
-                    display: flex;
-                }
-                a {
-                    text-decoration: none;
-                    color: red;
-                    height: 2rem;
-                    border: 1px solid red;
-                    border-radius: 1rem;
-                    text-align: end;
-                    vertical-align: bottom;
-                }
+            a {
+                display: none;
             }
             &.active {
-                background-color: palegoldenrod;
-                height: 15rem;
+                background-color: #f1ede8;
                 .id {
+                    .name-place {
+                        h2 {
+                            color: #f8294f;
+                            &:last-of-type {
+                                font-family: 'LeagueSpartan';
+                            }
+                        }
+                        p {
+                            display: none;
+                        }
+                    }
                     img {
                         @media (min-width: 36rem) {
                             display: none;
@@ -119,26 +148,27 @@ main {
                     display: flex;
                     flex-direction: column;
                 }
-                .infos {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    .hour-room {
-                        display: flex;
-                    }
-                    a {
-                        text-decoration: none;
-                        color: red;
-                        height: 2rem;
-                        border: 1px solid red;
-                        border-radius: 1rem;
-                        text-align: end;
-                    }
+                .hour-room {
+                    display: flex;
+                }
+                a {
+                    display: inline;
+                    text-decoration: none;
+                    color: red;
+                    height: 2rem;
+                    border: 1px solid red;
+                    border-radius: 1rem;
+                    text-align: end;
+                }
+                @media (min-width: 36rem) {
+                    padding: 1rem
                 }
             }
             @media (min-width: 36rem) {
                 .id {
+                    order: 1;
                     flex-direction: column;
-                    justify-content: start;
+                    align-items: start;
                     img {
                         order: -1;
                         width: 100%;
@@ -147,7 +177,28 @@ main {
                         border-radius: 0;
                     }
                 }
+                .subject {
+                    order: 3;
+                }
+                .hour-room {
+                    order: 2;
+                }
+                a {
+                    order: 4;
+                }
             }
+        }
+        @media (min-width: 36rem) {
+            height: 15rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1rem;
+            .speaker {
+                padding: 0rem;
+            }
+        }
+        @media (min-width: 48rem) {
+            grid-template-columns: repeat(4, 1fr);
         }
     }
 }

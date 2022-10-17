@@ -1,4 +1,52 @@
-@font-face {
+  /* museo */
+  @font-face {
+    font-family: "Museo";
+    src: url("museo/museo300.woff2") format("woff2"),
+         url("museo/museo300.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Museo";
+    src: url("museo/museo500.woff2") format("woff2"),
+         url("museo/museo500.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Museo";
+    src: url("museo/museo700.woff2") format("woff2"),
+         url("museo/museo700.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+  /* maven */
+  @font-face {
+    font-family: "Maven";
+    src: url("maven/MavenPro-VariableFont_wght.ttf") format("truetype-variations");
+    font-variation-settings: 'wght'300 'wght'900;
+    font-style: normal;
+  }
+
+  /* montserrat */
+  @font-face {
+    font-family: "Montserrat";
+    src: url("montserrat/Montserrat-VF.ttf") format("truetype-variations");
+    src: url("montserrat/Montserrat-VF.woff2") format("truetype-variations");
+    font-variation-settings: 'wght'100 'wght'900;
+    font-style: normal;
+  }
+
+    /* leaguespartan */
+    @font-face {
+      font-family: "LeagueSpartan";
+      src: url("leaguespartan/LeagueSpartanVariable.ttf") format("truetype-variations");
+      src: url("leaguespartan/LeagueSpartanVariable.woff2") format("truetype-variations");
+      font-variation-settings: 'wght'100 'wght'900;
+      font-style: normal;
+    }
+
+  @font-face {
     font-family: 'codeconf';
     src:  url('codeconf/codeconf.woff?oat0m9') format('woff');
     font-weight: normal;
@@ -83,68 +131,3 @@
     content: "\e94f";
   }
   
-  /* museo */
-  @font-face {
-    font-family: "museo";
-    src: url("museo/museo300.woff2") format("woff2"),
-         url("museo/museo300.woff") format("woff");
-    font-weight: 300;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "museo";
-    src: url("museo/museo500.woff2") format("woff2"),
-         url("museo/museo500.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "museo";
-    src: url("museo/museo700.woff2") format("woff2"),
-         url("museo/museo700.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "maven";
-    src: url("maven/maven400.woff2") format("woff2"),
-         url("maven/maven400.woff") format("woff");
-    font-weight: 400;
-    font-style: normal;
-  }
-  /* maven */
-  @font-face {
-    font-family: "maven";
-    src: url("maven/maven500.woff2") format("woff2"),
-         url("maven/maven500.woff") format("woff");
-    font-weight: 500;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "maven";
-    src: url("maven/maven600.woff2") format("woff2"),
-         url("maven/maven600.woff") format("woff");
-    font-weight: 600;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "maven";
-    src: url("maven/maven700.woff2") format("woff2"),
-         url("maven/maven700.woff") format("woff");
-    font-weight: 700;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "maven";
-    src: url("maven/maven800.woff2") format("woff2"),
-         url("maven/maven800.woff") format("woff");
-    font-weight: 800;
-    font-style: normal;
-  }
-  @font-face {
-    font-family: "maven";
-    src: url("maven/maven900.woff2") format("woff2"),
-         url("maven/maven900.woff") format("woff");
-    font-weight: 900;
-    font-style: normal;
-  }
