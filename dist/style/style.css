@@ -42,7 +42,8 @@
 }
 @font-face {
   font-family: "codeconf";
-  src: url("codeconf/codeconf.woff?oat0m9") format("woff");
+  src: url("codeconf/codeconf.ttf") format("ttf");
+  src: url("codeconf/codeconf.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -143,8 +144,7 @@
 }
 
 *, *::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, p {
@@ -155,6 +155,7 @@ body {
   font-family: "Maven";
   font-variation-settings: "wght" 300;
   margin: 1rem;
+  background-color: #f8f8f8;
 }
 
 header {
@@ -163,17 +164,11 @@ header {
   margin: auto;
 }
 header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 header nav ul {
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 header .hero {
@@ -181,9 +176,7 @@ header .hero {
   background-color: #f8294f;
   display: grid;
   grid-template-areas: "t";
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  align-items: end;
   margin-top: 4rem;
   color: white;
 }
@@ -235,48 +228,34 @@ main {
   margin: auto;
 }
 main .breadcrumb {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 4rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
+  color: #f8294f;
+}
+main .breadcrumb p {
+  -webkit-margin-start: 0.5rem;
+          margin-inline-start: 0.5rem;
+  -webkit-padding-start: 0.5rem;
+          padding-inline-start: 0.5rem;
+  -webkit-border-start: 1px solid #f8294f;
+          border-inline-start: 1px solid #f8294f;
 }
 main .speakers {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: #f8f8f8;
+  flex-direction: column;
 }
 main .speakers .speaker {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 1rem;
 }
 main .speakers .speaker .id {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 main .speakers .speaker .id .name-place h2 {
   font-family: "Museo";
@@ -318,17 +297,10 @@ main .speakers .speaker.active .id .name-place p {
   }
 }
 main .speakers .speaker.active .subject {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 main .speakers .speaker.active .hour-room {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 main .speakers .speaker.active a {
@@ -347,40 +319,25 @@ main .speakers .speaker.active a {
 }
 @media (min-width: 36rem) {
   main .speakers .speaker .id {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+    order: 1;
+    flex-direction: column;
+    align-items: start;
   }
   main .speakers .speaker .id img {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+    order: -1;
     width: 100%;
     height: auto;
     aspect-ratio: 1/1;
     border-radius: 0;
   }
   main .speakers .speaker .subject {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
+    order: 3;
   }
   main .speakers .speaker .hour-room {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
   }
   main .speakers .speaker a {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
+    order: 4;
   }
 }
 @media (min-width: 36rem) {

@@ -15,6 +15,7 @@ body {
     font-family: 'Maven';
     font-variation-settings: 'wght'300;
     margin: 1rem;
+    background-color: #f8f8f8;
 }
 
 header {
@@ -84,11 +85,16 @@ main {
         display: flex;
         height: 4rem;
         align-items: center;
+        color: #f8294f;
+        p {
+            margin-inline-start: 0.5rem;
+            padding-inline-start: 0.5rem;
+            border-inline-start: 1px solid #f8294f;
+        }
     }
     .speakers {
         display: flex;
         flex-direction: column;
-        background-color: #f8f8f8;
         .speaker {
             width: 100%;
             display: flex;
