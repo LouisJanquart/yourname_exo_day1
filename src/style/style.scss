@@ -4,207 +4,528 @@
 @import "webfonts.scss";
 @import "reset.scss";
 
-*, *::before, *::after {
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-h1, h2, h3, h4, p {
-    margin: 0;
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
 }
 
 body {
-    font-family: 'Maven';
-    font-variation-settings: 'wght'300;
-    margin: 1rem;
-    background-color: #f8f8f8;
+  font-family: 'Maven';
+  font-variation-settings: 'wght' 400;
+  margin: 0;
+  background: #fff;
+  color: #230A4D;
 }
 
 header {
+  overflow: hidden;
+  padding: 1rem;
+  background: #f8f8f8;
+
+  .header_wrapper {
+    width: 100%;
+    margin: auto;
+    max-width: 60rem;
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+
+      ul {
+        list-style-type: none;
+        display: flex;
+      }
+    }
+
+    .hero {
+      height: 10rem;
+      background-color: #f8294f;
+      display: grid;
+      grid-template-areas: "t";
+      align-items: end;
+      margin-top: 4rem;
+      color: white;
+
+      img {
+        grid-area: t;
+        justify-self: center;
+        position: relative;
+        bottom: 57px;
+      }
+
+      .text {
+        grid-area: t;
+        position: relative;
+        bottom: 27px;
+        padding: 2rem;
+
+        h1 {
+          font-family: 'Museo';
+          font-weight: 600;
+          font-size: 2.75rem;
+        }
+
+        p {
+          display: none;
+        }
+      }
+
+      @media (min-width: 36rem) {
+        grid-template-columns: 1fr 2fr;
+
+        .text {
+          align-self: center;
+          bottom: auto;
+          grid-column: 2;
+          padding: 0 3rem 2rem 0;
+
+          h1 {
+            font-size: 2rem;
+          }
+
+          p {
+            display: inline;
+          }
+        }
+      }
+
+      @media (min-width: 48rem) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+
+main {
+  flex-direction: column;
+
+  .breadcrumb_wrapper {
+    background: #f8f8f8;
+    padding: 1rem;
+
+    .breadcrumb {
+      width: 100%;
+      max-width: 60rem;
+      margin: auto;
+      display: flex;
+      height: 2rem;
+      align-items: center;
+      color: #f8294f;
+
+      p {
+        margin-inline-start: 0.5rem;
+        padding-inline-start: 0.5rem;
+        border-inline-start: 1px solid #f8294f;
+      }
+    }
+  }
+
+  .speakers_list_wrapper {
+    background: #f8f8f8;
+    padding: 1rem;
+
+    .speakers_list {
+      width: 100%;
+      max-width: 60rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+
+      &__speaker {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+
+        .id {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .name-place {
+            h2 {
+              font-family: 'Museo';
+              color: #230A4D;
+              font-weight: 300;
+            }
+
+            p {
+              color: #f8294f;
+              font-family: 'LeagueSpartan';
+              font-variation-settings: 'wght' 300;
+            }
+          }
+
+          img {
+            height: 5rem;
+            border-radius: 2.5rem;
+          }
+        }
+
+        .subject {
+          display: none;
+        }
+
+        .hour-room {
+          display: none;
+        }
+
+        a {
+          display: none;
+        }
+
+        &.active {
+          background-color: #f1ede8;
+
+          .id {
+            margin-block-end: 1rem;
+            .name-place {
+              line-height: 1.25rem;
+              h2 {
+                color: #f8294f;
+
+                &:last-of-type {
+                  font-family: 'LeagueSpartan';
+                }
+              }
+
+              p {
+                display: none;
+              }
+            }
+
+            img {
+              @media (min-width: 36rem) {
+                display: none;
+              }
+            }
+          }
+
+          .subject {
+            display: flex;
+            flex-direction: column;
+            line-height: 150%;
+            h2 {
+              margin-bottom: 0.25rem;
+            }
+            margin-block-end: 1rem;
+          }
+
+          .hour-room {
+            display: flex;
+            position: relative;
+            bottom: -1.5rem;
+            time {
+              padding-inline: 0.5rem;
+              border-inline-end: 1px solid #230A4D;
+              margin-inline-end: 0.5rem;
+            }
+          }
+
+          a {
+            width: 50%;
+            display: inline;
+            text-decoration: none;
+            color: red;
+            padding-block: 0.25rem;
+            padding-inline: 1rem;
+            border: 1px solid red;
+            border-radius: 1rem;
+            text-align: end;
+            align-self: end;
+          }
+
+          //speakers_list_speaker.active
+          @media (min-width: 36rem) {
+            padding: 1rem;
+          }
+        }
+
+        //.speakers_list__speaker
+        @media (min-width: 36rem) {
+          padding: 0;
+
+          .id {
+            order: 1;
+            flex-direction: column;
+            align-items: start;
+
+            img {
+              order: -1;
+              width: 100%;
+              height: auto;
+              aspect-ratio: 1/1;
+              border-radius: 0;
+            }
+          }
+
+          .subject {
+            order: 3;
+          }
+
+          .hour-room {
+            order: 2;
+          }
+
+          a {
+            order: 4;
+          }
+        }
+      }
+
+      //.speakers_list
+      @media (min-width: 36rem) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+      }
+
+      //.speakers_list
+      @media (min-width: 48rem) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+
+  .speaker_application {
     width: 100%;
     max-width: 60rem;
     margin: auto;
-    nav {
-        display: flex;
-        justify-content: space-between;
-        ul {
-            list-style-type: none;
-            display: flex;
-        }
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    &__title {
+      color: #f8294f;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'LeagueSpartan';
+      font-size: 2rem;
+      font-variation-settings: 'wght' 600;
+      margin-block-start: 2rem;
+      margin-block-end: 1rem;
     }
-    .hero {
-        height: 10rem;
-        background-color: #f8294f;
-        display: grid;
-        grid-template-areas: "t";
-        align-items: end;
-        margin-top: 4rem;
-        color: white;
-        img {
-            grid-area: t;
-            justify-self: center;
-            position: relative;
-            bottom: 57px;
-        }
-        .text {
-            grid-area: t;
-            position: relative;
-            bottom: 27px;
-            padding: 2rem;
-            h1 {
-                font-family: 'Museo';
-                font-weight: 600;
-                font-size: 2.75rem;
-            }
-            p {
-                display: none;
-            }
-        }
-        @media (min-width: 36rem) {
-            grid-template-columns: 1fr 2fr;
-            .text {
-                align-self: center;
-                bottom: auto;
-                grid-column: 2;
-                padding: 0 3rem 2rem 0;
-                h1 {
-                    font-size: 2rem;
-                }
-                p {
-                    display: inline;
-                }
-            }
-        }
-        @media (min-width: 48rem) {
-            grid-template-columns: 1fr 1fr;
-        }
+
+    &__tagline {
+      width: 70%;
+      margin-inline: auto;
+      text-align: center;
+      font-family: 'Museo';
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-block-end: 1rem;
+      line-height: 150%;
     }
+
+    &__explanation {
+      text-align: center;
+      font-variation-settings: 'wght' 400;
+      line-height: 150%;
+      margin-block-end: 2rem;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        display: none;
+      }
+
+      input {
+        padding: 0.5rem 0rem;
+        border: none;
+        border-block-end: 2px solid #EAEAEA;
+        margin-block-end: 1rem;
+
+        &::placeholder {
+          color: #000;
+          font-family: 'Maven';
+          font-size: 1.25rem;
+        }
+
+        &:nth-of-type(5) {
+          height: 8rem;
+          border: 2px solid #EAEAEA;
+          padding: 1rem;
+          margin-block-start: 1rem;
+
+          &::placeholder {
+            font-size: 1rem;
+          }
+        }
+
+        &:last-of-type {
+          color: #f8294f;
+          border: 1px solid #f8294f;
+          border-radius: 4rem;
+          padding-inline: 2rem;
+          background: #fff;
+          text-transform: uppercase;
+          font-family: 'LeagueSpartan';
+          font-size: 1.25rem;
+          width: fit-content;
+          margin-inline: auto;
+          margin-block-start: 3rem;
+          margin-block-end: 3rem;
+        }
+      }
+    }
+
+    &__or {
+      width: 70%;
+      margin-inline: auto;
+      text-align: center;
+      font-family: 'Museo';
+      font-size: 1.5rem;
+      font-weight: 300;
+      line-height: 150%;
+    }
+  }
+
+  .ticket_button {
+    position: relative;
+    bottom: -4rem;
+    color: white;
+    text-decoration: none;
+    .red_pill {
+      height: 5rem;
+      width: fit-content;
+      background: #f8294f;
+      padding-inline: 2rem;
+      border-radius: 2.5rem;
+      box-shadow: 0 0 0 1rem #97787C20,
+                  0 0 1rem 1.5rem #97787C20;
+      margin: auto;
+      font-size: 1.5rem;
+      font-variation-settings: 'wght' 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      p {
+        padding-inline-end: 1rem;
+      }
+
+      span {
+        opacity: 0.5;
+        padding: 0.25rem;
+        position: relative;
+        bottom: -3px;
+      }
+    }
+    .blue_thing {
+      height: 1.5rem;
+      width: fit-content;
+      background: #2f2b3c;
+      padding: 0.25rem 1rem;
+      border-radius: 0 0 1rem 1rem;
+      margin: auto;
+      font-size: 0.75rem;
+      font-variation-settings: 'wght'500;
+    }
+  }
 }
-main {
-    max-width: 60rem;
+
+footer {
+  padding: 1rem;
+  background: #2f2b3c;
+  color: #fff;
+  overflow: hidden;
+
+  .footer_wrapper {
+    width: 100%;
     margin: auto;
-    .breadcrumb {
+    max-width: 60rem;
+
+    .footer_infos {
+      display: flex;
+      flex-direction: column;
+
+      &__location {
+        line-height: 150%;
+        margin-block-end: 1rem;
+
+        h2 {
+          font-family: 'Museo';
+          color: #e5d2c3;
+          margin-block-start: 5rem;
+          margin-block-end: 1rem;
+        }
+
+        p:first-of-type {
+          padding: 0.5rem;
+          border: 1px solid #e5d2c350;
+          border-radius: 4rem;
+          font-variation-settings: 'wght' 600;
+          margin-block-end: 1rem;
+        }
+      }
+
+      &__image {
+        display: none;
+      }
+
+      &__phone {
+        line-height: 150%;
+
+        strong {
+          font-variation-settings: 'wght' 600;
+        }
+
+        em {
+          font-style: normal;
+          color: #e5d2c3;
+        }
+      }
+
+      &__sponsors {
+        padding-block: 2rem;
         display: flex;
-        height: 4rem;
-        align-items: center;
-        color: #f8294f;
-        p {
-            margin-inline-start: 0.5rem;
-            padding-inline-start: 0.5rem;
-            border-inline-start: 1px solid #f8294f;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-around;
+      }
+
+      &__social {
+        padding-block: 1rem;
+
+        h3 {
+          color: #e5d2c3;
+          font-family: 'Museo';
+          margin-block-end: 1rem;
         }
+
+        .reseaux {
+          display: flex;
+          justify-content: space-between;
+          font-family: 'Museo';
+
+          p::before {
+            font-size: 1.5rem;
+            padding-inline-end: 0.5rem;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      &__line {
+        height: 1px;
+        width: 100vw;
+        background-color: #e5d2c350;
+        position: relative;
+        transform: translateX(-1rem);
+      }
     }
-    .speakers {
-        display: flex;
-        flex-direction: column;
-        .speaker {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 1rem;
-            .id {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                .name-place {
-                    h2 {
-                        font-family: 'Museo';
-                        color: #230A4D;
-                        font-weight: 300;
-                    }
-                    p {
-                        color: #f8294f;     
-                        font-variation-settings: 'wght'300;
-                    }
-                }
-                img {
-                    height: 5rem;
-                    border-radius: 2.5rem;
-                }
-            }
-            .subject {
-                display: none;
-            }
-            .hour-room {
-                display: none;
-            }
-            a {
-                display: none;
-            }
-            &.active {
-                background-color: #f1ede8;
-                .id {
-                    .name-place {
-                        h2 {
-                            color: #f8294f;
-                            &:last-of-type {
-                                font-family: 'LeagueSpartan';
-                            }
-                        }
-                        p {
-                            display: none;
-                        }
-                    }
-                    img {
-                        @media (min-width: 36rem) {
-                            display: none;
-                        }
-                    }
-                }
-                .subject {
-                    display: flex;
-                    flex-direction: column;
-                }
-                .hour-room {
-                    display: flex;
-                }
-                a {
-                    display: inline;
-                    text-decoration: none;
-                    color: red;
-                    height: 2rem;
-                    border: 1px solid red;
-                    border-radius: 1rem;
-                    text-align: end;
-                }
-                @media (min-width: 36rem) {
-                    padding: 1rem
-                }
-            }
-            @media (min-width: 36rem) {
-                .id {
-                    order: 1;
-                    flex-direction: column;
-                    align-items: start;
-                    img {
-                        order: -1;
-                        width: 100%;
-                        height: auto;
-                        aspect-ratio: 1/1;
-                        border-radius: 0;
-                    }
-                }
-                .subject {
-                    order: 3;
-                }
-                .hour-room {
-                    order: 2;
-                }
-                a {
-                    order: 4;
-                }
-            }
-        }
-        @media (min-width: 36rem) {
-            height: 15rem;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 1rem;
-            .speaker {
-                padding: 0rem;
-            }
-        }
-        @media (min-width: 48rem) {
-            grid-template-columns: repeat(4, 1fr);
-        }
-    }
+  }
 }
