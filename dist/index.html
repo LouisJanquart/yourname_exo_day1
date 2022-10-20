@@ -14,14 +14,21 @@
     <div class="header_wrapper">
       <nav>
         <img src="image/logos/codeconf2020.svg" alt="logo codeconf 2022">
-        <ul>
-          <li><a href="#">Schedule</a></li>
+        <ul class="mobile-menu">
+          <li class="icon-schedule"><a href="#"></a></li>
+          <li class="icon-burger"><a href="#"></a></li>
+        </ul>
+        <ul class="menu">
+          <li><img src="image/logos/codeconf2020.svg" alt="logo codeconf 2022"></li>
+          <li class="icon-slack"></li>
+          <li class="icon-schedule"><a href="#">Schedule</a></li>
           <li><a href="#">Event</a></li>
           <li><a href="#">Speakers</a></li>
           <li><a href="#">Team</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Get Tickets</a></li>
           <li>
-            <form>
+            <form class="icon-loop">
               <label for="search">Search</label>
               <input type="text" id="search" name="search">
             </form>
@@ -31,7 +38,7 @@
       <div class="hero">
         <img src="image/SpeakersPicture/presents.png" alt="Speaker">
         <div class="text">
-          <h1>Speaker Edition 2022</h1>
+          <h1>Speaker Edition 2022</h1>
           <p>Discover the speakers and the topics or suggest your own topic for our next event</p>
         </div>
       </div>
@@ -46,7 +53,7 @@
     </div>
     <div class="speakers_list_wrapper">
       <div class="speakers_list">
-        <div class="speakers_list__speaker">
+        <div class="speakers_list__speaker" id="s1">
           <div class="id">
             <div class="name-place">
               <h2>Chris</h2>
@@ -60,12 +67,12 @@
             <p>Without servers, we'd have no way to share our creations with the world</p>
           </div>
           <div class="hour-room">
-            <p>09:30</p>
+            <time datetime="09:30" class="icon-hour">09h30</time>
             <p>R1</p>
           </div>
           <a href="#">About</a>
         </div>
-        <div class="speakers_list__speaker active">
+        <div class="speakers_list__speaker"  id="s2">
           <div class="id">
             <div class="name-place">
               <h2>Sara</h2>
@@ -79,133 +86,133 @@
             <p>You can re-visit my Web site even when you’re not connected to the Internet</p>
           </div>
           <div class="hour-room">
-            <time datetim="10:15" class="icon-hour">10h15</time>
+            <time datetime="10:15" class="icon-hour">10h15</time>
             <p>R1</p>
           </div>
           <a href="#">About</a>
         </div>
-        <div class="speakers_list__speaker">
+        <div class="speakers_list__speaker" id="s3">
           <div class="id">
             <div class="name-place">
               <h2>Eric</h2>
               <h2>Meyer</h2>
               <p>Cleveland, OH</p>
             </div>
-            <img src="image/SpeakersPicture/eric@3x.jpg" alt="">
+            <img src="image/SpeakersPicture/eric@3x.jpg" alt="Eric Meyer">
           </div>
           <div class="subject">
             <h2>Faux Grid Tracks</h2>
             <p>Is it possible to style the rows and columns of a [CSS] grid—the grid itself?</p>
           </div>
           <div class="hour-room">
-            <p>04:00 pm</p>
+            <time datetime="16:00" class="icon-hour">16h00</time>
             <p>R1</p>
           </div>
           <a href="#">About</a>
         </div>
-        <div class="speakers_list__speaker">
+        <div class="speakers_list__speaker" id="s4">
           <div class="id">
             <div class="name-place">
               <h2>Lea</h2>
               <h2>Verou</h2>
               <p>Cambridge, MA</p>
             </div>
-            <img src="image/SpeakersPicture/lea@3x.jpg" alt="">
+            <img src="image/SpeakersPicture/lea@3x.jpg" alt="Lea Verou">
           </div>
           <div class="subject">
             <h2>Mavo</h2>
             <p>New approachable way to create Web applications</p>
           </div>
           <div class="hour-room">
-            <p>04:00 pm</p>
-            <p>R1</p>
+            <time datetime="16:00" class="icon-hour">16h00</time>
+            <p>R2</p>
           </div>
           <a href="#">About</a>
         </div>
-        <div class="speakers_list__speaker">
+        <div class="speakers_list__speaker" id="s5">
           <div class="id">
             <div class="name-place">
               <h2>Shirley</h2>
               <h2>Wu</h2>
               <p>San Francisco, CA</p>
             </div>
-            <img src="image/SpeakersPicture/shirley@3x.jpg" alt="">
+            <img src="image/SpeakersPicture/shirley@3x.jpg" alt="Shirley Wu">
           </div>
           <div class="subject">
             <h2>655 Frustrations Doing Data Visualization</h2>
             <p>Visualization teams spend more time visualizing than those on embedded teams</p>
           </div>
           <div class="hour-room">
-            <p>09:30 am</p>
+            <time datetime="09:30" class="icon-hour">09h30</time>
             <p>R2</p>
           </div>
           <a href="#">About</a>
         </div>
-        <div class="speakers_list__speaker">
+        <div class="speakers_list__speaker" id="s6">
           <div class="id">
             <div class="name-place">
               <h2>Luke</h2>
-              <h2>Wroblewsk</h2>
+              <h2>Wroblewski</h2>
               <p>San Francisco, CA</p>
             </div>
-            <img src="image/SpeakersPicture/luke@3x.jpg" alt="">
+            <img src="image/SpeakersPicture/luke@3x.jpg" alt="Luke Wroblewski">
           </div>
           <div class="subject">
             <h2>The Way of the Web</h2>
             <p>Science fiction is not about predicting the future, but about what we need to have a future</p>
           </div>
           <div class="hour-room">
-            <p>11:30am</p>
+            <time datetime="11:30" class="icon-hour">11h30</time>
             <p>R1</p>
           </div>
           <a href="#">About</a>
         </div>
-        <div class="speakers_list__speaker">
+        <div class="speakers_list__speaker" id="s7">
           <div class="id">
             <div class="name-place">
               <h2>Nicolas</h2>
               <h2>Gallagher</h2>
               <p>San Francisco, CA</p>
             </div>
-            <img src="image/SpeakersPicture/nico@3x.jpg" alt="">
+            <img src="image/SpeakersPicture/nico@3x.jpg" alt="Nicolas Gallagher">
           </div>
           <div class="subject">
             <h2>Making SVG icon libraries for React apps</h2>
             <p>Using SVG is currently the best way to create icon libraries for apps</p>
           </div>
           <div class="hour-room">
-            <p>02:00 pm</p>
+            <time datetime="14:00" class="icon-hour">14h00</time>
             <p>R1</p>
           </div>
           <a href="#">About</a>
         </div>
-        <div class="speakers_list__speaker">
+        <div class="speakers_list__speaker" id="s8">
           <div class="id">
             <div class="name-place">
               <h2>Rachel</h2>
               <h2>Andrew</h2>
               <p>Bristol, UK</p>
             </div>
-            <img src="image/SpeakersPicture/rachel@3x.jpg" alt="">
+            <img src="image/SpeakersPicture/rachel@3x.jpg" alt="Rachel Andrews">
           </div>
           <div class="subject">
             <h2>Making Things Better</h2>
             <p>Redefining the Technical Possibilities of CSS</p>
           </div>
           <div class="hour-room">
-            <p>03:00 pm</p>
+            <time datetime="15:00" class="icon-hour">15h00</time>
             <p>R1</p>
           </div>
           <a href="#">About</a>
         </div>
-        <div class="speakers_list__speaker">
+        <div class="speakers_list__speaker" id="s9">
           <div class="id">
             <div class="name-place">
               <h2>Stephen</h2>
               <h2>Hay</h2>
               <p>Leeuwarden, NL</p>
             </div>
-            <img src="image/SpeakersPicture/stephen@3x.jpg" alt="">
+            <img src="image/SpeakersPicture/stephen@3x.jpg" alt="Stephen Hay">
           </div>
           <div class="subject">
             <h2>Zero interface thinking</h2>
@@ -213,64 +220,64 @@
             </p>
           </div>
           <div class="hour-room">
-            <p>05:00 pm</p>
+            <time datetime="17:00" class="icon-hour">17h00</time>
             <p>R1</p>
           </div>
           <a href="#">About</a>
         </div>
-        <div class="speakers_list__speaker">
+        <div class="speakers_list__speaker" id="s10">
           <div class="id">
             <div class="name-place">
               <h2>Paul</h2>
               <h2>Irish</h2>
               <p>Palo Alto, CA</p>
             </div>
-            <img src="image/SpeakersPicture/paul@3x.jpg" alt="">
+            <img src="image/SpeakersPicture/paul@3x.jpg" alt="Paul Irish">
           </div>
           <div class="subject">
             <h2>Developer Tooling, lighthouse</h2>
             <p>Auditing, performance metrics, and best practices for Progressive Web Apps</p>
           </div>
           <div class="hour-room">
-            <p>10:30 am</p>
+            <time datetime="10:30" class="icon-hour">10h30</time>
             <p>R2</p>
           </div>
           <a href="#">About</a>
         </div>
-        <div class="speakers_list__speaker">
+        <div class="speakers_list__speaker" id="s11">
           <div class="id">
             <div class="name-place">
               <h2>Nicole</h2>
               <h2>Sullivan</h2>
               <p>San Francisco, CA</p>
             </div>
-            <img src="image/SpeakersPicture/nicole@3x.jpg" alt="">
+            <img src="image/SpeakersPicture/nicole@3x.jpg" alt="Nicole Sullivan">
           </div>
           <div class="subject">
             <h2>OOCSS code standards</h2>
             <p>Code conventions are important for the long-term maintainability of code</p>
           </div>
           <div class="hour-room">
-            <p>11:30 am</p>
+            <time datetime="11:30" class="icon-hour">11h30</time>
             <p>R2</p>
           </div>
           <a href="#">About</a>
         </div>
-        <div class="speakers_list__speaker">
+        <div class="speakers_list__speaker" id="s12">
           <div class="id">
             <div class="name-place">
               <h2>Brad</h2>
               <h2>Frost</h2>
               <p>Pittsburgh, PA</p>
             </div>
-            <img src="image/SpeakersPicture/brad@3x.jpg" alt="">
+            <img src="image/SpeakersPicture/brad@3x.jpg" alt="Brad Frost">
           </div>
           <div class="subject">
             <h2>Atomic Design</h2>
             <p>We can construct design systems in a more methodical way</p>
           </div>
           <div class="hour-room">
-            <p>02:00 pm</p>
+            <time datetime="14:00" class="icon-hour">14h00</time>
             <p>R2</p>
           </div>
           <a href="#">About</a>
@@ -314,7 +321,7 @@
         </div>
         <div class="footer_infos__image"><img src="image/Pictures/lasvegas_conventioncenter.png" alt="Las Vegas Convention Center"></div>
         <div class="footer_infos__phone">
-          <p>Helpdesk <strong>Call-center +1 702-892-0711</strong> <em>(speaker’s support)</em></p>
+          <p>Helpdesk Call-center <strong>+1 702‑892‑0711</strong> <em>(speaker’s support)</em></p>
         </div>
         <div class="footer_infos__sponsors">
           <img src="image/logos/cisco.svg" alt="logo Cisco">
@@ -335,11 +342,12 @@
         <div class="footer_infos__line"></div>
         <div class="footer_infos__organisation">
           <p>organised by WebeesMeetups.com</p>
-          <p>copyright 2018</p>
+          <p><em>copyright 2018</em></p>
         </div>
       </div>
     </div>
   </footer>
+  <script src="script/script.js"></script>
 </body>
 
 </html>

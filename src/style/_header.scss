@@ -1,0 +1,219 @@
+header {
+  overflow: hidden;
+  padding: 1rem;
+  background: #f8f8f8;
+
+  .header_wrapper {
+    width: 100%;
+    margin: auto;
+    max-width: 60rem;
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+
+      .mobile-menu {
+        list-style-type: none;
+        display: flex;
+        gap: 1rem;
+      }
+
+      .menu {
+        list-style-type: none;
+        position: fixed;
+        top: -2rem;
+        left: calc(100vh - 1rem);
+        height: 100vh;
+        width: 100vw;
+        background: #2f2b3c;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        gap: 2rem;
+        padding: 3rem;
+        font-family: 'Museo';
+        font-size: 2rem;
+        color: #fff;
+        transition: all 1s;
+
+        li {
+          a {
+            text-decoration: none;
+            color: #fff;
+          }
+        }
+
+        li:nth-of-type(1) {
+          position: absolute;
+          top: 3rem;
+          left: 3rem;
+        }
+
+        li:nth-of-type(2) {
+          position: absolute;
+          top: 3rem;
+          right: 3rem;
+        }
+        
+        li:nth-of-type(3) {
+          &::before {
+            display: none;
+            padding: 1rem;
+          }
+        }
+
+        li:nth-of-type(8) {
+          a {
+            color: #f8294f;
+          }
+        }
+
+        li:last-of-type {
+          order: -1;
+
+          form {
+            &::before {
+              vertical-align: middle;
+            }
+
+            label {
+              display: none;
+            }
+
+            input {
+              display: none;
+              background: #2f2b3c;
+              border: 1px solid #fff;
+              border-radius: 1rem;
+              padding-inline: 0.5rem;
+              color: white;
+              &.visible {
+                display: inline;
+              }
+            }
+          }
+        }
+
+        &.left {
+          left: 0;
+        }
+
+        @media (min-width: 48rem) {
+          position: static;
+          height: auto;
+          width: auto;
+          background: none;
+          display: flex;
+          flex-direction: row;
+          justify-content: end;
+          align-items: center;
+          gap: 0;
+          padding: 0;
+          font-family: 'Maven';
+          font-size: 1rem;
+          color: #000;
+          transition: all 0s;
+
+          li {
+            padding: 0.5rem;
+            a {
+              color: #000;
+            }
+          }
+
+          li:nth-of-type(1) {
+            display: none;
+          }
+          li:nth-of-type(2) {
+            display: none;
+          }
+
+          li:nth-of-type(3) {
+            &::before {
+              display: inline;
+            }
+          }
+
+          li:nth-of-type(8) {
+            display: none;
+          }
+          li:last-of-type {
+            order: 0;
+            form {
+              input {
+                background: #f8f8f8;
+                border: 1px solid #f8294f;
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+      @media (min-width: 48rem) {
+
+        .mobile-menu {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .hero {
+    height: 10rem;
+    background-color: #f8294f;
+    display: grid;
+    grid-template-areas: "t";
+    align-items: end;
+    margin-top: 4rem;
+    color: white;
+
+    img {
+      grid-area: t;
+      justify-self: center;
+      position: relative;
+      bottom: 57px;
+    }
+
+    .text {
+      grid-area: t;
+      position: relative;
+      bottom: 27px;
+      padding: 2rem;
+
+      h1 {
+        font-family: 'Museo';
+        font-weight: 600;
+        font-size: 2.75rem;
+      }
+
+      p {
+        display: none;
+      }
+    }
+
+    @media (min-width: 36rem) {
+      grid-template-columns: 1fr 2fr;
+
+      .text {
+        align-self: center;
+        bottom: auto;
+        grid-column: 2;
+        padding: 0 3rem 2rem 0;
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          display: inline;
+        }
+      }
+    }
+
+    @media (min-width: 48rem) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
