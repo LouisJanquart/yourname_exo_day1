@@ -11,6 +11,15 @@ header {
     nav {
       display: flex;
       justify-content: space-between;
+      
+      &.border-bottom {
+        padding-block-end: 1rem;;
+        border-block-end: 1px solid #eaeaea;
+      }
+
+      &>a {
+        padding: 1rem;
+      }
 
       .mobile-menu {
         list-style-type: none;
@@ -42,6 +51,11 @@ header {
           a {
             text-decoration: none;
             color: #fff;
+          }
+          &.close {
+            font-size: 4rem;
+            line-height: 30px;
+            transform: rotate(45deg);
           }
         }
 
@@ -83,14 +97,19 @@ header {
             }
 
             input {
-              display: none;
+              //display: none;
               background: #2f2b3c;
-              border: 1px solid #fff;
-              border-radius: 1rem;
-              padding-inline: 0.5rem;
+              padding: 0;
+              border: none;
+              border-block-end: 1px solid #fff;
               color: white;
+              width: 0px;
+              transition: all 0.5s;
               &.visible {
                 display: inline;
+                width: calc(100vw - 10rem);
+                padding-inline: 0.5rem;
+                margin-inline-start: 1rem;
               }
             }
           }
@@ -144,8 +163,13 @@ header {
             form {
               input {
                 background: #f8f8f8;
-                border: 1px solid #f8294f;
+                border: none;
+                border-block-end: 1px solid #000;
                 color: #000;
+                &.visible {
+                  width: 5rem;
+                  margin-inline-start: 0;
+                }
               }
             }
           }

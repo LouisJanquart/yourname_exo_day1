@@ -12,15 +12,15 @@
 <body>
   <header>
     <div class="header_wrapper">
-      <nav>
-        <img src="image/logos/codeconf2020.svg" alt="logo codeconf 2022">
+      <nav class="border-bottom">
+        <a href="index.html"><img src="image/logos/codeconf2020.svg" alt="logo codeconf 2022"></a>
         <ul class="mobile-menu">
           <li class="icon-schedule"><a href="#"></a></li>
           <li class="icon-burger"><a href="#"></a></li>
         </ul>
         <ul class="menu">
-          <li><img src="image/logos/codeconf2020.svg" alt="logo codeconf 2022"></li>
-          <li class="icon-slack"></li>
+          <li><img src="image/logos/codeconf2020copie.svg" alt="logo codeconf 2022"></li>
+          <li class="close">﹢</li>
           <li class="icon-schedule"><a href="#">Schedule</a></li>
           <li><a href="#">Event</a></li>
           <li><a href="#">Speakers</a></li>
@@ -40,27 +40,65 @@
   <main>
     <div class="breadcrumb_wrapper">
       <div class="breadcrumb">
-        <span class="icon-home"></span>
+        <a href="index.html" class="icon-home"></a>
         <p>Contact</p>
       </div>
     </div>
-    <div class="contact">
-      <h2 class="contact__title">Need to contact us ?</h2>
-      <form class="contact__form">
-        <label for="firstname">Firstname</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Firstname">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Name">
-        <label for="mail">Your subject</label>
-        <input type="email" id="mail" name="mail" placeholder="Mail">
-        <label for="object">Object</label>
-        <input type="text" id="object" name="object" placeholder="Object">
-        <label for="message">Message</label>
-        <input type="text" id="message" name="message" placeholder="Message">
-        <input type="button" value="Send subject">
-      </form>
+    <div class="contact_wrapper">
+      <div class="contact">
+        <h2 class="contact__title">Need to contact us ?</h2>
+        <form class="contact__form">
+          <label for="firstname">Firstname</label>
+          <input type="text" id="firstname" name="firstname" placeholder="Firstname">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Name">
+          <label for="mail">Your subject</label>
+          <input type="email" id="mail" name="mail" placeholder="Mail">
+          <label for="object">Object</label>
+          <input type="text" id="object" name="object" placeholder="Object">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Message"></textarea>
+          <input type="button" value="Send subject">
+        </form>
+      </div>
     </div>
   </main>
+  <footer>
+    <div class="footer_wrapper">
+      <div class="footer_infos">
+        <div class="footer_infos__location">
+          <h2>The Las Vegas Convention Center</h2>
+          <p class="icon-pin">3150 Paradise Rd, Las Vegas, NV 89109</p>
+          <p>The Las Vegas Convention Center (LVCC), located adjacent to the Las Vegas Strip, encompasses approximately 3.2 million square feet with exhibit space of 2 million square feet and meeting space of nearly 250,000 square feet.</p>
+        </div>
+        <div class="footer_infos__image"><img src="image/Pictures/lasvegas_conventioncenter.png" alt="Las Vegas Convention Center"></div>
+        <div class="footer_infos__phone">
+          <p>Helpdesk Call-center <strong>+1 702‑892‑0711</strong> <em>(speaker’s support)</em></p>
+        </div>
+        <div class="footer_infos__sponsors">
+          <img src="image/logos/cisco.svg" alt="logo Cisco">
+          <img src="image/logos/amazon_s3.svg" alt="logo Amazon Web Services">
+          <img src="image/logos/nick.svg" alt="logo Nickelodeon">
+          <img src="image/logos/meetup.svg" alt="logo Meetup">
+          <img src="image/logos/stripe.svg" alt="logo Stripe">
+          <img src="image/logos/mailchimp.svg" alt="logo MailChimp">
+        </div>
+        <div class="footer_infos__line"></div>
+        <div class="footer_infos__social">
+          <h3>Follow us</h3>
+          <div class="reseaux">
+            <p class="icon-slack">#codeconf2022</p>
+            <p class="icon-tw">@codeconf2022</p>
+          </div>
+        </div>
+        <div class="footer_infos__line"></div>
+        <div class="footer_infos__organisation">
+          <p>organised by WebeesMeetups.com</p>
+          <p><em>copyright 2018</em></p>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="script/script.js"></script>
 </body>
 
