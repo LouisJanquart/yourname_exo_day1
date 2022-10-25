@@ -149,10 +149,23 @@ p {
   content: "\e94f";
 }
 
+:root {
+  --bg-color: #fff;
+  --bg-color-variant: #f8f8f8;
+  --footer-color: #2f2b3c;
+  --contrast-color: #f8294f;
+  --text-color: #000;
+  --text-color-variant: #2f2b3c;
+  --text-color-light: #fff;
+  --text-color-light-variant: #e5d2c3;
+  --media-tablet: 36rem;
+  --media-desktop: 48rem;
+}
+
 header {
   overflow: hidden;
   padding: 1rem;
-  background: #f8f8f8;
+  background: var(--bg-color-variant);
 }
 header .header_wrapper {
   width: 100%;
@@ -190,7 +203,7 @@ header .header_wrapper nav .menu {
   left: calc(100vh - 1rem);
   height: 100vh;
   width: 100vw;
-  background: #2f2b3c;
+  background: var(--footer-color);
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,13 +222,13 @@ header .header_wrapper nav .menu {
   padding: 3rem;
   font-family: "Museo";
   font-size: 2rem;
-  color: #fff;
+  color: var(--text-color-light);
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 header .header_wrapper nav .menu li a {
   text-decoration: none;
-  color: #fff;
+  color: var(--text-color-light);
 }
 header .header_wrapper nav .menu li.close {
   font-size: 4rem;
@@ -238,7 +251,7 @@ header .header_wrapper nav .menu li:nth-of-type(3)::before {
   padding: 1rem;
 }
 header .header_wrapper nav .menu li:nth-of-type(8) a {
-  color: #f8294f;
+  color: var(--contrast-color);
 }
 header .header_wrapper nav .menu li:last-of-type {
   -webkit-box-ordinal-group: 0;
@@ -252,7 +265,7 @@ header .header_wrapper nav .menu li:last-of-type form label {
   display: none;
 }
 header .header_wrapper nav .menu li:last-of-type form input {
-  background: #2f2b3c;
+  background: var(--footer-color);
   padding: 0;
   border: none;
   -webkit-border-after: 1px solid #fff;
@@ -295,7 +308,7 @@ header .header_wrapper nav .menu.left {
     padding: 0;
     font-family: "Maven";
     font-size: 1rem;
-    color: #000;
+    color: var(--text-color);
     -webkit-transition: all 0s;
     transition: all 0s;
   }
@@ -303,7 +316,7 @@ header .header_wrapper nav .menu.left {
     padding: 0.5rem;
   }
   header .header_wrapper nav .menu li a {
-    color: #000;
+    color: var(--text-color);
   }
   header .header_wrapper nav .menu li:nth-of-type(1) {
     display: none;
@@ -323,11 +336,11 @@ header .header_wrapper nav .menu.left {
             order: 0;
   }
   header .header_wrapper nav .menu li:last-of-type form input {
-    background: #f8f8f8;
+    background: var(--bg-color-variant);
     border: none;
-    -webkit-border-after: 1px solid #000;
-            border-block-end: 1px solid #000;
-    color: #000;
+    -webkit-border-after: 1px solid var(--text-color);
+            border-block-end: 1px solid var(--text-color);
+    color: var(--text-color);
   }
   header .header_wrapper nav .menu li:last-of-type form input.visible {
     width: 5rem;
@@ -342,14 +355,14 @@ header .header_wrapper nav .menu.left {
 }
 header .hero {
   height: 10rem;
-  background-color: #f8294f;
+  background-color: var(--contrast-color);
   display: grid;
   grid-template-areas: "t";
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
   margin-top: 4rem;
-  color: white;
+  color: var(--text-color-light);
 }
 header .hero img {
   grid-area: t;
@@ -401,7 +414,7 @@ main {
           flex-direction: column;
 }
 main .breadcrumb_wrapper {
-  background: #f8f8f8;
+  background: var(--bg-color-variant);
   padding: 1rem;
 }
 main .breadcrumb_wrapper .breadcrumb {
@@ -415,10 +428,10 @@ main .breadcrumb_wrapper .breadcrumb {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #f8294f;
+  color: var(--contrast-color);
 }
 main .breadcrumb_wrapper .breadcrumb a {
-  color: #f8294f;
+  color: var(--contrast-color);
   text-decoration: none;
 }
 main .breadcrumb_wrapper .breadcrumb p {
@@ -426,12 +439,12 @@ main .breadcrumb_wrapper .breadcrumb p {
           margin-inline-start: 0.5rem;
   -webkit-padding-start: 0.5rem;
           padding-inline-start: 0.5rem;
-  -webkit-border-start: 1px solid #f8294f;
-          border-inline-start: 1px solid #f8294f;
+  -webkit-border-start: 1px solid var(--contrast-color);
+          border-inline-start: 1px solid var(--contrast-color);
   font-family: "Museo";
 }
 main .speakers_list_wrapper {
-  background: #f8f8f8;
+  background: var(--bg-color-variant);
   padding: 1rem;
 }
 main .speakers_list_wrapper .speakers_list {
@@ -477,11 +490,11 @@ main .speakers_list_wrapper .speakers_list__speaker .id {
 }
 main .speakers_list_wrapper .speakers_list__speaker .id .name-place h2 {
   font-family: "Museo";
-  color: #230A4D;
+  color: var(--text-color-variant);
   font-weight: 300;
 }
 main .speakers_list_wrapper .speakers_list__speaker .id .name-place p {
-  color: #f8294f;
+  color: var(--contrast-color);
   font-family: "LeagueSpartan";
   font-variation-settings: "wght" 300;
 }
@@ -509,7 +522,7 @@ main .speakers_list_wrapper .speakers_list__speaker.active .id .name-place {
   line-height: 1.5rem;
 }
 main .speakers_list_wrapper .speakers_list__speaker.active .id .name-place h2 {
-  color: #f8294f;
+  color: var(--contrast-color);
 }
 main .speakers_list_wrapper .speakers_list__speaker.active .id .name-place p {
   display: none;
@@ -558,8 +571,8 @@ main .speakers_list_wrapper .speakers_list__speaker.active .hour-room {
 main .speakers_list_wrapper .speakers_list__speaker.active .hour-room time {
   -webkit-padding-end: 0.5rem;
           padding-inline-end: 0.5rem;
-  -webkit-border-end: 1px solid #230A4D;
-          border-inline-end: 1px solid #230A4D;
+  -webkit-border-end: 1px solid var(--text-color-variant);
+          border-inline-end: 1px solid var(--text-color-variant);
   -webkit-margin-end: 0.5rem;
           margin-inline-end: 0.5rem;
 }
@@ -585,10 +598,10 @@ main .speakers_list_wrapper .speakers_list__speaker.active a {
   width: 50%;
   display: inline;
   text-decoration: none;
-  color: red;
+  color: var(--contrast-color);
   padding-block: 0.25rem;
   padding-inline: 1rem;
-  border: 1px solid red;
+  border: 1px solid var(--contrast-color);
   border-radius: 1rem;
   text-align: end;
   -ms-flex-item-align: end;
@@ -623,10 +636,19 @@ main .speakers_list_wrapper .speakers_list__speaker.active a {
   main .speakers_list_wrapper .speakers_list__speaker .id .name-place {
     padding: 1rem;
   }
-  main .speakers_list_wrapper .speakers_list__speaker .id img {
+  main .speakers_list_wrapper .speakers_list__speaker .id .photo {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
+    display: grid;
+    grid-template-areas: "t";
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .speakers_list_wrapper .speakers_list__speaker .id .photo img {
+    grid-area: t;
     width: 100%;
     height: auto;
     aspect-ratio: 1/1;
@@ -646,6 +668,24 @@ main .speakers_list_wrapper .speakers_list__speaker.active a {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
+  }
+}
+@media (min-width: 48rem) {
+  main .speakers_list_wrapper .speakers_list__speaker:hover:not(.active) .id .photo::after {
+    content: "more info";
+    grid-area: t;
+    color: var(--text-color-light);
+    background: rgba(248, 41, 79, 0.5647058824);
+    height: 6rem;
+    width: 6rem;
+    border-radius: 3rem;
+    display: grid;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 0 0 1rem 1.5rem rgba(248, 41, 79, 0.1882352941);
+            box-shadow: 0 0 1rem 1.5rem rgba(248, 41, 79, 0.1882352941);
   }
 }
 @media (min-width: 36rem) {
@@ -674,7 +714,7 @@ main .speaker_application {
   padding: 2rem 2rem 0 2rem;
 }
 main .speaker_application__title {
-  color: #f8294f;
+  color: var(--contrast-color);
   text-align: center;
   text-transform: uppercase;
   font-family: "LeagueSpartan";
@@ -749,11 +789,11 @@ main .speaker_application__form input::placeholder {
   font-size: 1.25rem;
 }
 main .speaker_application__form input:last-of-type {
-  color: #f8294f;
-  border: 1px solid #f8294f;
+  color: var(--contrast-color);
+  border: 1px solid var(--contrast-color);
   border-radius: 4rem;
   padding-block: 1rem;
-  background: #fff;
+  background: var(--bg-color);
   font-family: "LeagueSpartan";
   font-size: 1.25rem;
   font-variation-settings: "wght" 400;
@@ -771,27 +811,27 @@ main .speaker_application__form textarea {
   resize: none;
 }
 main .speaker_application__form textarea::-webkit-input-placeholder {
-  color: #000;
+  color: var(--text-color);
   font-family: "Maven";
   font-size: 1rem;
 }
 main .speaker_application__form textarea::-moz-placeholder {
-  color: #000;
+  color: var(--text-color);
   font-family: "Maven";
   font-size: 1rem;
 }
 main .speaker_application__form textarea:-ms-input-placeholder {
-  color: #000;
+  color: var(--text-color);
   font-family: "Maven";
   font-size: 1rem;
 }
 main .speaker_application__form textarea::-ms-input-placeholder {
-  color: #000;
+  color: var(--text-color);
   font-family: "Maven";
   font-size: 1rem;
 }
 main .speaker_application__form textarea::placeholder {
-  color: #000;
+  color: var(--text-color);
   font-family: "Maven";
   font-size: 1rem;
 }
@@ -833,7 +873,7 @@ main .speaker_application__or {
 main .ticket_button {
   position: relative;
   bottom: -4rem;
-  color: white;
+  color: var(--bg-color);
   text-decoration: none;
 }
 main .ticket_button .red_pill {
@@ -841,7 +881,7 @@ main .ticket_button .red_pill {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background: #f8294f;
+  background: var(--contrast-color);
   padding-inline: 2rem;
   border-radius: 2.5rem;
   -webkit-box-shadow: 0 0 1rem 1.5rem rgba(248, 41, 79, 0.1882352941), 0 0 0 1rem rgba(255, 255, 255, 0.062745098);
@@ -874,7 +914,7 @@ main .ticket_button .blue_thing {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  background: #2f2b3c;
+  background: var(--footer-color);
   padding: 0.25rem 1rem;
   border-radius: 0 0 1rem 1rem;
   margin: auto;
@@ -882,7 +922,7 @@ main .ticket_button .blue_thing {
   font-variation-settings: "wght" 500;
 }
 main .contact_wrapper {
-  background: #f8f8f8;
+  background: var(--bg-color-variant);
 }
 main .contact_wrapper .contact {
   width: 100%;
@@ -898,7 +938,7 @@ main .contact_wrapper .contact {
   padding: 0 2rem 2rem 2rem;
 }
 main .contact_wrapper .contact__title {
-  color: #f8294f;
+  color: var(--contrast-color);
   font-family: "Maven";
   font-size: 1.5rem;
   -webkit-margin-before: 2rem;
@@ -925,39 +965,39 @@ main .contact_wrapper .contact__form input {
           border-block-end: 2px solid #EAEAEA;
   -webkit-margin-after: 1rem;
           margin-block-end: 1rem;
-  background: #f8f8f8;
+  background: var(--bg-color-variant);
 }
 main .contact_wrapper .contact__form input::-webkit-input-placeholder {
-  color: #000;
+  color: var(--text-color);
   font-family: "Maven";
   font-size: 1.25rem;
 }
 main .contact_wrapper .contact__form input::-moz-placeholder {
-  color: #000;
+  color: var(--text-color);
   font-family: "Maven";
   font-size: 1.25rem;
 }
 main .contact_wrapper .contact__form input:-ms-input-placeholder {
-  color: #000;
+  color: var(--text-color);
   font-family: "Maven";
   font-size: 1.25rem;
 }
 main .contact_wrapper .contact__form input::-ms-input-placeholder {
-  color: #000;
+  color: var(--text-color);
   font-family: "Maven";
   font-size: 1.25rem;
 }
 main .contact_wrapper .contact__form input::placeholder {
-  color: #000;
+  color: var(--text-color);
   font-family: "Maven";
   font-size: 1.25rem;
 }
 main .contact_wrapper .contact__form input:last-of-type {
   color: #fff;
-  border: 1px solid #f8294f;
+  border: 1px solid var(--contrast-color);
   border-radius: 4rem;
   padding-block: 1rem;
-  background: #f8294f;
+  background: var(--contrast-color);
   font-family: "Maven";
   font-size: 1.5rem;
   font-variation-settings: "wght" 600;
@@ -971,7 +1011,7 @@ main .contact_wrapper .contact__form input:last-of-type {
           box-shadow: 0 0 1rem 1rem rgba(248, 41, 79, 0.1882352941);
 }
 main .contact_wrapper .contact__form textarea {
-  background: #f8f8f8;
+  background: var(--bg-color-variant);
   height: 8rem;
   border: 2px solid #EAEAEA;
   padding: 1rem;
@@ -980,27 +1020,27 @@ main .contact_wrapper .contact__form textarea {
   resize: none;
 }
 main .contact_wrapper .contact__form textarea::-webkit-input-placeholder {
-  color: #000;
+  color: var(--text-color);
   font-family: "Maven";
   font-size: 1rem;
 }
 main .contact_wrapper .contact__form textarea::-moz-placeholder {
-  color: #000;
+  color: var(--text-color);
   font-family: "Maven";
   font-size: 1rem;
 }
 main .contact_wrapper .contact__form textarea:-ms-input-placeholder {
-  color: #000;
+  color: var(--text-color);
   font-family: "Maven";
   font-size: 1rem;
 }
 main .contact_wrapper .contact__form textarea::-ms-input-placeholder {
-  color: #000;
+  color: var(--text-color);
   font-family: "Maven";
   font-size: 1rem;
 }
 main .contact_wrapper .contact__form textarea::placeholder {
-  color: #000;
+  color: var(--text-color);
   font-family: "Maven";
   font-size: 1rem;
 }
@@ -1052,23 +1092,102 @@ main .contact_wrapper .contact__form textarea::placeholder {
   }
 }
 
+.schedule_table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.schedule_table__wrapper {
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+  overflow-x: scroll;
+  padding-block: 1rem;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+}
+.schedule_table__wrapper::-webkit-scrollbar {
+  display: none;
+}
 .schedule_table__content {
   display: grid;
-  grid-template-columns: 100vw 100vw;
+  grid-template-columns: 100% 100%;
+}
+.schedule_table__content th {
+  text-align: start;
+  font-family: "Museo";
+  font-size: 4rem;
+  font-weight: 600;
+  -webkit-margin-start: 1rem;
+          margin-inline-start: 1rem;
+  -webkit-padding-start: 1rem;
+          padding-inline-start: 1rem;
 }
 .schedule_table__break {
-  background: #f8f8f8;
+  background: var(--bg-color-variant);
   margin-inline: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+}
+.schedule_table__break .name {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  text-transform: lowercase;
 }
 .schedule_table__conf {
   margin-inline: 1rem;
-  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-block: 1rem;
+  padding-inline: 1rem;
+}
+.schedule_table__conf span {
+  -webkit-padding-after: 0.25rem;
+          padding-block-end: 0.25rem;
+}
+.schedule_table__conf span:nth-child(1),
+.schedule_table__conf span:nth-child(2) {
+  color: var(--contrast-color);
+}
+@media (min-width: 36rem) {
+  .schedule_table__content {
+    grid-template-columns: 50vw 50vw;
+  }
 }
 
+/*
+.slide_btn {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 2rem;
+  background: var(--contrast-color);
+  color: var(--text-color-light);
+  position: absolute;
+  right: -1rem;
+  @media (min-width: 36rem) {
+    display: none;
+  }
+}
+*/
 footer {
   padding: 2rem;
-  background: #2f2b3c;
-  color: #fff;
+  background: var(--footer-color);
+  color: var(--text-color-light);
   overflow: hidden;
 }
 footer .footer_infos {
@@ -1099,20 +1218,20 @@ footer .footer_infos__location {
 footer .footer_infos__location h2 {
   font-family: "Museo";
   font-size: 1.25rem;
-  color: #e5d2c3;
+  color: var(--text-color-light-variant);
   -webkit-margin-after: 1rem;
           margin-block-end: 1rem;
 }
 footer .footer_infos__location p:first-of-type {
   padding: 0.5rem 1rem;
-  border: 1px solid rgba(229, 210, 195, 0.3137254902);
+  border: 1px solid rgba(245, 210, 195, 0.3137254902);
   border-radius: 4rem;
   font-variation-settings: "wght" 600;
   -webkit-margin-after: 1rem;
           margin-block-end: 1rem;
 }
 footer .footer_infos__location p:first-of-type::before {
-  color: #e5d2c3;
+  color: var(--text-color-light-variant);
 }
 @media (min-width: 36rem) {
   footer .footer_infos__location p:first-of-type {
@@ -1149,7 +1268,7 @@ footer .footer_infos__social {
   padding-block: 1.5rem;
 }
 footer .footer_infos__social h3 {
-  color: #e5d2c3;
+  color: var(--text-color-light-variant);
   font-family: "Museo";
   -webkit-margin-after: 1rem;
           margin-block-end: 1rem;
@@ -1261,8 +1380,8 @@ body {
   font-family: "Maven";
   font-variation-settings: "wght" 400;
   margin: 0;
-  background: #fff;
-  color: #230A4D;
+  background: var(--bg-color);
+  color: var(--text-color-variant);
 }
 
 strong {
@@ -1271,5 +1390,5 @@ strong {
 
 em {
   font-style: normal;
-  color: #e5d2c3;
+  color: var(--text-color-light-variant);
 }/*# sourceMappingURL=style.css.map */

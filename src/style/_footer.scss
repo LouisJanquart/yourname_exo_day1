@@ -1,7 +1,7 @@
 footer {
   padding: 2rem;
-  background: #2f2b3c;
-  color: #fff;
+  background: var(--footer-color);
+  color: var(--text-color-light);
   overflow: hidden;
 
   .footer_infos {
@@ -25,19 +25,19 @@ footer {
       h2 {
         font-family: 'Museo';
         font-size: 1.25rem;
-        color: #e5d2c3;
+        color: var(--text-color-light-variant);
         margin-block-end: 1rem;
       }
 
       p:first-of-type {
         padding: 0.5rem 1rem;
-        border: 1px solid #e5d2c350;
+        border: 1px solid #f5d2c350;
         border-radius: 4rem;
         font-variation-settings: 'wght' 600;
         margin-block-end: 1rem;
 
         &::before {
-          color: #e5d2c3;
+          color: var(--text-color-light-variant);
         }
 
         @media (min-width: 36rem) {
@@ -76,7 +76,7 @@ footer {
       padding-block: 1.5rem;
 
       h3 {
-        color: #e5d2c3;
+        color: var(--text-color-light-variant);
         font-family: 'Museo';
         margin-block-end: 1rem;
       }
@@ -158,7 +158,7 @@ footer {
       }
     }
 
-    @media (min-width: 48rem) {
+    @media (min-width: (48rem)) {
       grid-template-columns: 2fr 1fr 1fr;
       grid-template-areas: "l i i"
         "s s s"

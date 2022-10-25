@@ -1,4 +1,5 @@
 @import "reset.scss";
+//@import "normalize";
 @import "webfonts.scss";
 @import "default.scss";
 @import "variables.scss";
@@ -12,8 +13,8 @@ body {
   font-family: 'Maven';
   font-variation-settings: 'wght' 400;
   margin: 0;
-  background: #fff;
-  color: #230A4D;
+  background: var(--bg-color);
+  color: var(--text-color-variant);
 }
 
 strong {
@@ -22,5 +23,5 @@ strong {
 
 em {
   font-style: normal;
-  color: #e5d2c3;
+  color: var(--text-color-light-variant);
 }
